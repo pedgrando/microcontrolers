@@ -56,6 +56,9 @@ main:
 
 END
 ```
+São feitas diversas operações aritiméticas com ACC e B: inicialmente, ACC = 2 e B = 3; soma-se #7, que está no endereço 00h, a ACC que agora vale 9; subtrai-se #3 de ACC, resultando em 6; incrementa-se B, até 4; subtrai-se B (4) de ACC (6), que agora vale 2; multiplica-se ACC (2) e B (4) e o resultado vai para ACC (8), e zera-se B; incrementa-se B duas vezes, resultando em 2; divide-se ACC (8) por B (2) e o resultado vai para ACC (4), zera-se B; os valores são salvos ena memória e reinica-se o programa.
+
+O bit menos significativo do PSW é o bit de paridade do acumulador: ele é 1 se o valor é par e 0 se é ímpar.
 
 # CODIGO 3
 
