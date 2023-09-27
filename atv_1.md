@@ -109,3 +109,4 @@ bloco3:
 
 end
 ```
+O código basicamente funciona como um loop eterno. Inicialmente, na seção principal do código, faz-se o reset do acumulador, para o caso de essa não ser a primeira execução do loop, e na sequência, atribui-se 10 ao registrador R0. Na sequência, o código é fracionado em três blocos: o primeiro, que é executado logo na sequência, verifica se o acumulador está zerado ou não, saltando para o bloco 2 em caso afirmativo, e para o bloco 3 em caso negativo; o segundo bloco apenas atribui a A o valor de R0 e volta para o bloco 1; por fim, o terceiro bloco é outro loop, em que se decrementa R0 até que ele seja 0. Basciamente, o fluxo de código será atribuir 10 a R0 e zerar A, saltar para o bloco 2, atribuir um valor não nulo a A, voltar para o bloco 1, saltar para o bloco3, zerar R0 em um loop e reiniciar esse processo.
