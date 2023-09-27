@@ -1,4 +1,4 @@
-###CODIGO 1
+# CODIGO 1
 
 ```
 org 0000h
@@ -32,7 +32,7 @@ END
 
 
 
-###CODIGO 2
+# CODIGO 2
 
 ```
 org 0000h
@@ -57,7 +57,7 @@ main:
 END
 ```
 
-###CODIGO 3
+# CODIGO 3
 
 ```
 org 0000; coloca a origem em 00h
@@ -78,7 +78,7 @@ end; encerra o programa
 
 
 
-###CODIGO 4
+# CODIGO 4
 
 ```
 org 0000h
