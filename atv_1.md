@@ -1,8 +1,6 @@
-;
-;        CODIGO 1
-;
-;
+CODIGO 1
 
+```
 org 0000h
 
 main:
@@ -30,15 +28,13 @@ main:
   	JMP $ 				; trava o programa nessa linha
 
 END
+```
 
 
 
+CODIGO 2
 
-;
-;        CODIGO 2
-;
-;
-
+```
 org 0000h
 
 main:
@@ -59,14 +55,11 @@ main:
 	JMP main ; salta para o inicio do codigo
 
 END
+```
 
+CODIGO 3
 
-
-;
-;        CODIGO 3
-;
-;
-
+```
 org 0000; coloca a origem em 00h
 
 inicio:
@@ -81,14 +74,11 @@ inicio:
 	SWAP A; realiza o swap de A
 	jmp inicio ; salta para a label inicio
 end; encerra o programa
+```
 
+CODIGO 4
 
-
-;
-;        CODIGO 4
-;
-;
-
+```
 org 0000h
 
 ajmp main ; salta para o bloco principal do codigo
@@ -116,3 +106,4 @@ bloco3:
 	 
 
 end
+```
