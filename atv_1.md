@@ -1,3 +1,9 @@
+# Atividade 1
+## Alunos
+Erik Melges 			NUSP: 12547399
+Gabriel Sotto Rodrigues		NUSP: 11800952
+Pedro A. B. Grando		NUSP: 12541766
+
 # CODIGO 1
 
 ```
