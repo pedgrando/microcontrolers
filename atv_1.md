@@ -70,22 +70,25 @@ O bit menos significativo do PSW é o bit de paridade do acumulador: ele é 1 se
 # CODIGO 3
 
 ```
-org 0000; coloca a origem em 00h
+org 0000
 
 inicio:
 	MOV ACC, #00000001b; move de forma indireta para o valor para ACC
 	MOV B,	#00000011b; move de forma indireta para o valor para B
+
 	ANL A, B; ADN logico entre A e B
 	RR A; rotaciona A a direita
 	RR A; rotaciona A a direita
+
 	CPL A; complemento de A
 	ORL A, B; OR logico entre A e B
 	XRL A, B; XOR logico entre A e B
+
 	SWAP A; realiza o swap de A
 	jmp inicio ; salta para a label inicio
 end; encerra o programa
 ```
-
+A medida que as operações lógicas são realizadas, observa-se as alterações em binário no ACC.
 
 
 # CODIGO 4
