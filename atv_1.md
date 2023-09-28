@@ -29,15 +29,20 @@ main:
 
 END
 ```
-Resposta da questão a: o tempo de cada instrução está comentada no final de cada linha do código. Sendo o tempo total de 23µs.
+Resposta da questão (a):
+	o tempo de cada instrução está comentada no final de cada linha do código. Sendo o tempo total de 23µs.
 
-Resposta da questão b: 23 ciclos de máquina
+Resposta da questão (b):
+	23 ciclos de máquina
 
-Resposta da questão c: O que acontece é que você está lendo o valor dos 8 bits da porta P1 e carregando esse valor no registrador A. Esse valor é setado em FF porque a porta está em nível lógico alto.
+Resposta da questão (c): 
+	O que acontece é que você está lendo o valor dos 8 bits da porta P1 e carregando esse valor no registrador A. Esse valor é setado em FF porque a porta está em nível lógico alto.
 
-Resposta da questão d: Todos os bits do acumulador são mudados para 1, ficando o valor 1111 1111.
+Resposta da questão (d):
+	Todos os bits do acumulador são mudados para 1, ficando o valor 1111 1111.
 
-Resposta da questão e: Visualiza-se mudanças nos registrados especiais DPH e DPL, logo, por se tratar de dois registradores, podemos mover valores de 4 digitos(16 bits) para o DPTR, sendo seu valor máximo FFFF.
+Resposta da questão (e):
+	Visualiza-se mudanças nos registrados especiais DPH e DPL, logo, por se tratar de dois registradores, podemos mover valores de 4 digitos(16 bits) para o DPTR, sendo seu valor máximo FFFF.
 
 # CODIGO 2
 
