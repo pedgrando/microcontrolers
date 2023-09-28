@@ -4,33 +4,40 @@
 org 0000h
 
 main:
-	MOV ACC, #35h ; move imediatamente 35h para o reg ACC
-	MOV ACC, #00h ; move imediatamente zero para o reg ACC
+	MOV ACC, #35h ; move imediatamente 35h para o reg ACC - 2µs
+	MOV ACC, #00h ; move imediatamente zero para o reg ACC - 2µs
 	
 	; garante a selecao do banco 0 de reg
-	CLR RS0 
-	CLR RS1
+	CLR RS0 ;1µs
+	CLR RS1 ;1µs
 	
-	MOV R0, #10h 	; move imediatamente 10h para R0
-	MOV B, #01h 		; move imediatamente 01h para B
+	MOV R0, #10h 	; move imediatamente 10h para R0 - 1µs
+	MOV B, #01h 		; move imediatamente 01h para B - 2µs
  	
-	MOV 00h, P1 		; move a porta P1 para o endereço 00h
+	MOV 00h, P1 		; move a porta P1 para o endereço 00h - 2µs
 	
-	SETB RS0 			; seleciona o banco de reg 1
+	SETB RS0 			; seleciona o banco de reg 1 - 1µs
 	
-	MOV R0, 00h 		; move o conteudo do endereco 00h para R0
-	MOV 10h, R0 		; move o conteudo de R0 para o endereco 10h
-	MOV R1, #10h		; move o valor 10h para R1
-	MOV A, @R1   	; move o valor que esta no endereco guardado por R1 para ACC
-	MOV DPTR, #9A5Bh	; move o valor 9A5Bh para DPTR
+	MOV R0, 00h 		; move o conteudo do endereco 00h para R0 - 2µs
+	MOV 10h, R0 		; move o conteudo de R0 para o endereco 10h - 2µs
+	MOV R1, #10h		; move o valor 10h para R1 - 1µs
+	MOV A, @R1   	; move o valor que esta no endereco guardado por R1 para ACC - 1µs
+	MOV DPTR, #9A5Bh	; move o valor 9A5Bh para DPTR - 2µs
 	
-	NOP
-  	JMP $ 				; trava o programa nessa linha
+	NOP; -1µs
+  	JMP $ 				; trava o programa nessa linha - 2µs
 
 END
 ```
+Resposta da questão a: o tempo de cada instrução está comentada no final de cada linha do código. Sendo o tempo total de 23µs.
 
+Resposta da questão b: 23 ciclos de máquina
 
+Resposta da questão c: O que acontece é que você está lendo o valor dos 8 bits da porta P1 e carregando esse valor no registrador A. Esse valor é setado em FF porque a porta está em nível lógico alto.
+
+Resposta da questão d: Todos os bits do acumulador são mudados para 1, ficando o valor 1111 1111.
+
+Resposta da questão e: Visualiza-se mudanças nos registrados especiais DPH e DPL, logo, por se tratar de dois registradores, podemos mover valores de 4 digitos(16 bits) para o DPTR, sendo seu valor máximo FFFF.
 
 # CODIGO 2
 
