@@ -15,7 +15,9 @@ Antes de comentar o código e a simulação, é interessante apontar conceitos i
 ---
 ## Código
 
-Partindo agora para os códigos, é interessante comentar as configurações feitas para o uso dos periféricos nos exemplos, principalmente no que diz respeito ao ADC e ao LCD. No primeiro caso, configurou-se, nos registradores ADCON0, ADCON1 e ADCON2, um pino de entrada analógico A5, definiu-se a utilização de tensões Vcc e Vss internas (5 e 0 V, em ordem), justificou-se a saída, que é dividida em dois registradores (ADRESH e ADRESL) à direita, de forma que os bits sigam a ordem natural de distribuição, armazendo os bits menos significativos em ADRESL e os mais em ADRESH, adotou-se um frequência de oscilação de 1/32 do clock (corresponde a um período entre 2 e 25 micro segundos) e um período de conversão de 12 TADs, conforme o que foi calculado na disciplina. 
+Partindo agora para os códigos, é interessante comentar as configurações feitas para o uso dos periféricos nos exemplos, principalmente no que diz respeito ao ADC e ao LCD. 
+
+No primeiro caso, configurou-se, nos registradores ADCON0, ADCON1 e ADCON2, um pino de entrada analógico A5, definiu-se a utilização de tensões Vcc e Vss internas (5 e 0 V, em ordem), justificou-se a saída, que é dividida em dois registradores (ADRESH e ADRESL) à direita, de forma que os bits sigam a ordem natural de distribuição, armazendo os bits menos significativos em ADRESL e os mais em ADRESH, adotou-se um frequência de oscilação de 1/32 do clock (corresponde a um período entre 2 e 25 micro segundos) e um período de conversão de 12 TADs, conforme o que foi calculado na disciplina. 
 
 ```
 // Configuracoes do ADC para o exemplo 10
@@ -24,7 +26,19 @@ ADCON1 = 0B00000000; // tensões de ref. internas = VDD e Vss
 ADCON2 = 0B10101010; // Justificativa para direita, FOSC/32 (tempo entre 2 e 25 us) e 12 TAD (tempo de conversão de cada bit + 2 TAD)
 ```
 
-No exemplo 11, foi configurado manualmente o registrador ADCON1, setando o pino A0 como entrada, mas o resto foi configurado através da função ADC_init(). Também foram utilizadas, em ambos os casos, bibliotecas padrões para o kit EasyPIC v7 que configuram o display LCD e fazem o envio de dados, de forma otimizada.
+No exemplo 11, foi configurado manualmente o registrador ADCON1, setando o pino A5 como entrada, mas o resto foi configurado através da função ADC_init(). Também foram utilizadas, em ambos os casos, bibliotecas padrões para o kit EasyPIC v7 que configuram o display LCD e fazem o envio de dados, de forma otimizada.
+
+```
+// Configuracoes do ADC para o exemplo 11
+ADCON1 = 0B00000000; //Configura todos os canais como ADC no PIC18F4450
+ADC_Init();  // função da biblioteca ADC do próprio compilador para inicializar ADC
+
+// Configuracao do modulo LCD
+  Lcd_Init();                 // Inicializa a lib. Lcd
+  Lcd_Cmd(_LCD_CLEAR);       // Clear display
+  Lcd_Cmd(_LCD_CURSOR_OFF);  // Cursor off
+  Lcd_Out(1,1,"ADC0:");   //Escreve na Linha x Coluna do LCD o texto(valor do ADC)
+```
 
 ---
 ## Simulação
