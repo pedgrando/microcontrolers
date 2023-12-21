@@ -53,5 +53,7 @@ Foi também elaborada uma simulação mostrada abaixo no software SimulIDE, na q
 ---
 ## Resultados e diposições finais
 
-Tanto na execução do exemplo 10 em sala de aula quanto na simulação com o exemplo 11, foi possível observar o funcionamento do ADC através das variações de tensão geradas pelo potenciometro. Também foi possível entender o comportamento do display de LCD e todo o pré-processamento envolvido n
+Tanto na execução do exemplo 10 em sala de aula quanto na simulação com o exemplo 11, foi possível observar o funcionamento do ADC através das variações de tensão geradas pelo potenciometro. Também foi possível entender o comportamento do display de LCD e todo o pré-processamento envolvido na formatação e exibição dos caractéres.
+
+É inegável que a utilização de bibliotecas prontas facilita enormemente o trabalho de programar, contudo é essencial que o programador tenha conhecimento dos conceitos base associados ao funcionamento do dispositivo. Um deles, essencial para o funcionamento de ambos os periféricos dessa prática é a sincronização entre os dispositivos. A utilização de clock correto, bem como a garantia de sincronia no envio e recebimento de informações é essencial em qualquer sistema embarcado e acaba sendo "perdido" com a utilização de uma biblioteca.
 
