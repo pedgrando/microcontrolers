@@ -2,6 +2,11 @@
 
 Nessa última prática, objetivou-se utilizar o microcontrolador PIC18F4550 para ler sinais analógicos controlados por um potenciometro, simulando um sensor de temperatura, discretizá-los com o uso de um ADC e expor os valores em um display LCD. Os códigos reunidos nesta pasta, de autoria do docente, aglutinam dois exemplos práticos nesse sentido.
 
+### Membros:
+- Erik Melges NUSP: 12547399
+- Gabriel Sotto Rodrigues NUSP: 11800952
+- Pedro Antonio Bruno Grando NUSP: 12547166
+
 ---
 ## Sobre os periféricos
 
@@ -19,3 +24,9 @@ Foi também elaborada uma simulação mostrada abaixo no software SimulIDE, na q
 
 
 ![alt text](https://github.com/pedgrando/microcontrolers/blob/main/project_3/img/circuito.png?raw=true)
+
+---
+## Resultados e diposições finais
+
+Tanto na execução do exemplo 10 em sala de aula quanto na simulação com o exemplo 11, foi possível observar o funcionamento do ADC através das variações de tensão geradas pelo potenciometro. Também foi possível entender o comportamento do display de LCD e todo o pré-processamento envolvido n
+
