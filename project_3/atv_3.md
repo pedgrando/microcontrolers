@@ -18,6 +18,7 @@ Antes de comentar o código e a simulação, é interessante apontar conceitos i
 Partindo agora para os códigos, é interessante comentar as configurações feitas para o uso dos periféricos nos exemplos, principalmente no que diz respeito ao ADC e ao LCD. No primeiro caso, configurou-se, nos registradores ADCON0, ADCON1 e ADCON2, um pino de entrada analógico A5, definiu-se a utilização de tensões Vcc e Vss internas (5 e 0 V, em ordem), justificou-se a saída, que é dividida em dois registradores (ADRESH e ADRESL) à direita, de forma que os bits sigam a ordem natural de distribuição, armazendo os bits menos significativos em ADRESL e os mais em ADRESH, adotou-se um frequência de oscilação de 1/32 do clock (corresponde a um período entre 2 e 25 micro segundos) e um período de conversão de 12 TADs, conforme o que foi calculado na disciplina. 
 
 ```
+// Configuracoes do ADC para o exemplo 10
 ADCON0 = 0B00001101;  // AN0 -> AD ligado, leitura deslig., canal AN0
 ADCON1 = 0B00000000; // tensões de ref. internas = VDD e Vss
 ADCON2 = 0B10101010; // Justificativa para direita, FOSC/32 (tempo entre 2 e 25 us) e 12 TAD (tempo de conversão de cada bit + 2 TAD)
